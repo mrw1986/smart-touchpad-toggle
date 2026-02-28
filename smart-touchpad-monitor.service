@@ -1,0 +1,13 @@
+[Unit]
+Description=Smart Touchpad Toggle Monitor
+Documentation=https://github.com/mrw1986/smart-touchpad-toggle
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/smart-touchpad-monitor.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target
